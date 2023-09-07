@@ -2,6 +2,7 @@
 
 #include "sc-agents-common/keynodes/coreKeynodes.hpp"
 #include "sc-agents-common/utils/IteratorUtils.hpp"
+#include "sc-agents-common/utils/AgentUtils.hpp"
 #include "sc-memory/sc_wait.hpp"
 
 #include "keynodes/Keynodes.hpp"
@@ -45,8 +46,7 @@ ScAddr NonAtomicActionInterpreter::getFirstSubAction(ScAddr const & decompositio
 void NonAtomicActionInterpreter::applyAction(ScAddr const & actionAddr)
 {
   SC_LOG_DEBUG("NonAtomicActionInterpreter: waiting for atomic action finish.");
-  context->CreateEdge(ScType::EdgeAccessConstPosPerm, scAgentsCommon::CoreKeynodes::question_initiated, actionAddr);
-  if (!ActionUtils::waitAction(context, actionAddr, WAIT_TIME))
+  if (!utils::AgentUtils::applyAction(context, actionAddr, WAIT_TIME))
   {
     throw std::runtime_error("NonAtomicActionInterpreter: action wait time expired.");
   }
