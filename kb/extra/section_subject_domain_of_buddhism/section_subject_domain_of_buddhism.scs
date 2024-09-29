@@ -1,0 +1,62 @@
+section_subject_domain_of_buddhism
+=> nrel_main_idtf:
+    [Раздел. Предметная область Буддизм]
+    (* <- lang_ru;; *);
+<- atomic_section;;
+
+section_subject_domain_of_buddhism = [*
+    subject_domain_of_buddhism
+    <- sc_node_struct;
+    => nrel_main_idtf:
+        [Предметная область Буддизм]
+        (* <- lang_ru;; *);
+    <- subject_domain;
+
+    // Максимальный классы
+    -> rrel_maximum_studied_object_class:
+        concept_Concepts;
+        
+    
+    // Немаксимальные классы
+    -> rrel_not_maximum_studied_object_class:
+        concept_Ethics;
+        concept_Figures;
+        concept_Philosophy;
+        concept_Principles;
+        concept_Teachings;
+        concept_Truths;
+        concept_Values;
+
+    
+    // Связка между классом
+    -> rrel_explored_relation:
+        nrel_BranchesOfBuddhism;
+        nrel_BuddhismAndScience;
+        nrel_CommunityAndMonasticLife;
+        nrel_CulturalInterpretations;
+        nrel_ModernBuddhism;
+        nrel_PhilosophicalDebates;
+        nrel_PracticesAndRituals;;
+
+
+*];;
+
+
+section_subject_domain_of_buddhism
+    -> rrel_key_sc_element:
+        subject_domain_of_buddhism;
+        concept_Concepts;
+        concept_Ethics;
+        concept_Figures;
+        concept_Philosophy;
+        concept_Principles;
+        concept_Teachings;
+        concept_Truths;
+        concept_Values;
+        nrel_BranchesOfBuddhism;
+        nrel_BuddhismAndScience;
+        nrel_CommunityAndMonasticLife;
+        nrel_CulturalInterpretations;
+        nrel_ModernBuddhism;
+        nrel_PhilosophicalDebates;
+        nrel_PracticesAndRituals;;

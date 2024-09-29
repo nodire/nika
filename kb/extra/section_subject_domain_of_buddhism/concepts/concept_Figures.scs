@@ -1,0 +1,5 @@
+concept_Figures
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Фигуры]
+    (* <- lang_ru;; *);;

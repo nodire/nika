@@ -1,0 +1,5 @@
+concept_Principles
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Принципы]
+    (* <- lang_ru;; *);;

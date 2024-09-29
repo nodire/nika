@@ -1,0 +1,5 @@
+concept_Philosophy
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Философия]
+    (* <- lang_ru;; *);;

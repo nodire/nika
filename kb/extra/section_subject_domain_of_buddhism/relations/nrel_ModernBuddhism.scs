@@ -1,0 +1,5 @@
+nrel_ModernBuddhism
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [современные взгляды*]
+    (* <- lang_ru;; *);;

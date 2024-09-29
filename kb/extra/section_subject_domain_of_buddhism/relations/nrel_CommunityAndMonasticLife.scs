@@ -1,0 +1,5 @@
+nrel_CommunityAndMonasticLife
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [сообщества*]
+    (* <- lang_ru;; *);;
